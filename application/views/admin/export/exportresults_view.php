@@ -24,7 +24,7 @@ function getGroups($surveyid){
             ->bindParam(":surveyid", $surveyid, PDO::PARAM_INT)
             ->query()->readAll();
 
-
+}
         $bGrouplist = QuestionGroup::model()->getGroups($surveyid);
 
         foreach ($bGrouplist as $desc)
