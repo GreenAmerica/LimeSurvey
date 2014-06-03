@@ -25,10 +25,11 @@ function getGroups($surveyid) {
             ->query()->readAll();
         }
           $aGrouplist = QuestionGroup::model()->getGroups($iSurveyID);
-        foreach ($aGrouplist as $desc)
-        {
-               echo "$desc <br>";
-        }
+      while ($row = aGrouplist($result)) {
+    echo '<pre>';
+    print_r ($row);
+    echo '</pre>';
+}
         
         ?>
 
