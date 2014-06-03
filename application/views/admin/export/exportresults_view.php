@@ -26,7 +26,7 @@ function getGroups($surveyid) {
         }
           $aGrouplist = QuestionGroup::model()->getGroups($iSurveyID);
       foreach ($aGrouplist as $item) {
-    echo $item <br>;
+    echo $item </b>;
 }
         
         ?>
