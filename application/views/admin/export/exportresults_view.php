@@ -13,21 +13,19 @@
 // BEGIN. I APPENDED THIS. it probably won't work though
 
 <?php
-function getGroups($surveyid){
-           $language = Survey::model()->findByPk($surveyid)->language;
+function getGroups($surveyid) {
+            $language = Survey::model()->findByPk($surveyid)->language;
             return Yii::app()->db->createCommand()
-             ->select(array('gid', 'group_name'))
+            ->select(array('gid', 'group_name'))
             ->from($this->tableName())
             ->where(array('and', 'sid=:surveyid', 'language=:language'))
             ->order('group_order asc')
             ->bindParam(":language", $language, PDO::PARAM_STR)
             ->bindParam(":surveyid", $surveyid, PDO::PARAM_INT)
             ->query()->readAll();
-
-}
-        $bGrouplist = QuestionGroup::model()->getGroups($surveyid);
-
-        foreach ($bGrouplist as $desc)
+        }
+          $aGrouplist = QuestionGroup::model()->getGroups($iSurveyID);
+        foreach ($aGrouplist as $desc)
         {
               echo "$desc <br>";
         }
