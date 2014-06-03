@@ -82,7 +82,7 @@
                 'data-srid' => $values[0]
             ));
             
-                $group_description = $_POST['description_' . $grouplang];
+                
             
             //echo '<pre>'; var_dump($this->groupMap); echo '</pre>';
                 foreach ($this->groupMap as $gid => $questions)
