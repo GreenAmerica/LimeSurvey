@@ -89,7 +89,7 @@
                 {
                     if ($gid != 0)
                     {
-                        $this->tag('h2', gT("Group") . ": " . $questions[0]['group_description']);
+                        $this->tag('h2', gT("Group") . ": " . $questions[0]['group_name']);
                     }
                     $this->openTag('table', array(
                         'class' => 'group',
